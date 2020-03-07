@@ -151,4 +151,19 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+<!--  查询名字是否唯一-->
+  <select id="checkUsername" resultType="int" parameterType="java.lang.String" >
+    select
+    count(1)
+    from mmall_user
+    where username = #{username,jdbcType=VARCHAR}
+  </select>
+<!--  selectLogin根据姓名和密码查询是否存在-->
+  <select id="selectLogin" resultMap="BaseResultMap" parameterType="com.mmall.pojo.User" >
+    select
+    <include refid="Base_Column_List" />
+    from mmall_user
+    where username = #{username,jdbcType=VARCHAR},
+    password = #{password,jdbcType=VARCHAR}
+  </select>
 </mapper>

@@ -14,4 +14,8 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+    //查询名字是否唯一
+    int checkUsername(String username);
+    //根据姓名和密码查询是否存在
+    User selectLogin(String username,String password);
 }
