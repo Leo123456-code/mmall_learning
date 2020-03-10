@@ -45,7 +45,7 @@
     </servlet>
 
 
-<!--拦截地址 .do 都会被拦截-->
+    <!--拦截地址 .do 都会被拦截-->
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.do</url-pattern>

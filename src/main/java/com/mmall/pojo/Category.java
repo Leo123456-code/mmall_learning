@@ -13,7 +13,7 @@ public class Category {
     private Integer parentId;
     // '类别名称',
     private String name;
-   //'类别状态1-正常,2-已废弃',
+    //'类别状态1-正常,2-已废弃',
     private Boolean status;
     //'排序编号,同类展示顺序,数值相等则自然排序',
     private Integer sortOrder;

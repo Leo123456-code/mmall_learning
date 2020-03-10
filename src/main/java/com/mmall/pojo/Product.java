@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
+
 @Data
 public class Product {
 
@@ -17,7 +18,7 @@ public class Product {
     private String subtitle;
     //'产品主图,url相对地址',
     private String mainImage;
-   //'图片地址,json格式,扩展用',
+    //'图片地址,json格式,扩展用',
     private String subImages;
     // '商品详情',
     private String detail;

@@ -12,11 +12,11 @@ import lombok.Getter;
  */
 @AllArgsConstructor
 @Getter
-public enum  ResponseCode {
-    SUCCESS(0,"成功"),
-    ERROR(1,"失败"),
-    NEED_LOGIN(10,"需要登录"),
-    ILLEGAL_ARGUMENT(2,"参数错误"),
+public enum ResponseCode {
+    SUCCESS(0, "成功"),
+    ERROR(1, "失败"),
+    NEED_LOGIN(10, "需要登录"),
+    ILLEGAL_ARGUMENT(2, "参数错误"),
     ;
 
     private final Integer code;

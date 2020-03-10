@@ -48,47 +48,45 @@ public class ServerResponse<T> implements Serializable {
 
     @JsonIgnore
     //使之不在json序列化结果当中
-    public boolean isSuccess(){
+    public boolean isSuccess() {
         /**
          * @Description 成功返回的状态
            @Author Leo
-         * @Date 2:52 2020/3/8
+          *@Date 2:52 2020/3/8
          * @Param []
          * @return boolean
-        */
+         */
         return this.status == ResponseCode.SUCCESS.getCode();
     }
 
-    public static <T> ServerResponse<T> createBySuccess(){
+    public static <T> ServerResponse<T> createBySuccess() {
         return new ServerResponse<>(ResponseCode.SUCCESS.getCode());
     }
 
-    public static <T> ServerResponse<T> createBySuccessMessage(String msg){
-        return new ServerResponse<>(ResponseCode.SUCCESS.getCode(),msg);
+    public static <T> ServerResponse<T> createBySuccessMessage(String msg) {
+        return new ServerResponse<>(ResponseCode.SUCCESS.getCode(), msg);
     }
 
-    public static <T> ServerResponse<T> createBySuccess(T data){
-        return new ServerResponse<>(ResponseCode.SUCCESS.getCode(),data);
+    public static <T> ServerResponse<T> createBySuccess(T data) {
+        return new ServerResponse<>(ResponseCode.SUCCESS.getCode(), data);
     }
 
-    public static <T> ServerResponse<T> createBySuccess(String msg,T data){
-        return new ServerResponse<>(ResponseCode.SUCCESS.getCode(),msg,data);
+    public static <T> ServerResponse<T> createBySuccess(String msg, T data) {
+        return new ServerResponse<>(ResponseCode.SUCCESS.getCode(), msg, data);
     }
 
     //失败
-    public static <T> ServerResponse<T> createByError(){
-        return new ServerResponse<>(ResponseCode.ERROR.getCode(),ResponseCode.ERROR.getDesc());
+    public static <T> ServerResponse<T> createByError() {
+        return new ServerResponse<>(ResponseCode.ERROR.getCode(), ResponseCode.ERROR.getDesc());
     }
 
-    public static <T> ServerResponse<T> createByErrorMessage(String msg){
-        return new ServerResponse<>(ResponseCode.ERROR.getCode(),msg);
+    public static <T> ServerResponse<T> createByErrorMessage(String msg) {
+        return new ServerResponse<>(ResponseCode.ERROR.getCode(), msg);
     }
 
-    public static <T> ServerResponse<T> createByErrorCodeMessage(int errorCode,String errorMessage){
-        return new ServerResponse<>(errorCode,errorMessage);
+    public static <T> ServerResponse<T> createByErrorCodeMessage(int errorCode, String errorMessage) {
+        return new ServerResponse<>(errorCode, errorMessage);
     }
-
-
 
 
 }
